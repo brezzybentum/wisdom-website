@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^\\$files = Get-ChildItem -Filter \\*\\.html; foreach \\(\\$file in \\$files\\) \\{ Write-Output \"--- \\$\\(\\$file\\.Name\\)\"; \\$html = Get-Content -Raw \\$file\\.FullName; \\$matches = \\[regex\\]::Matches\\(\\$html, '\\(\\?s\\)>\\\\s\\*\\(\\[\\^<\\]\\+\\?\\)\\\\s\\*<'\\); \\$matches \\| ForEach-Object \\{ \\$text = \\$_\\.Groups\\[1\\]\\.Value\\.Trim\\(\\); if \\(\\$text\\.Length -gt 2 -and \\$text -notmatch '\\^\\[\\\\d\\\\s/\\|©–—-\\]\\+\\$' -and \\$text -notmatch '\\^fa-'\\) \\{ \\$text \\} \\} \\| Sort-Object -Unique \\}$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
