@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script>try{if(localStorage.getItem("wisdomTheme")==="light"){document.documentElement.style.background="#f0f4ff";}}catch(e){}</script>
 </head>
 <body>
   <div class="top-bar">
@@ -29,6 +30,16 @@
         <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
         <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <div class="lang-switch" aria-label="Choose website language">
+          <button type="button" class="active" data-language="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" data-language="fr" aria-pressed="false">FR</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle Dark / Light Mode">
+          <i class="fa-solid fa-moon"></i>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          <span class="theme-label">Dark</span>
+        </button>
       </div>
     </div>
   </div>

@@ -560,4 +560,80 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ============================================================
+  // Active Page Nav Link Highlighting
+  // ============================================================
+  (function highlightCurrentPage() {
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Map each page file to the top-level nav link href it belongs to
+    const pageToNavMap = {
+      'index.html':            'index.html',
+      '':                      'index.html',
+      'company.html':          'company.html',
+      'managing-partner.html': 'company.html',
+      'advisory-support.html': 'advisory-support.html',
+      'studies.html':          'advisory-support.html',
+      'training.html':         'advisory-support.html',
+      'audit.html':            'advisory-support.html',
+      'team.html':             'team.html',
+      'contact.html':          'contact.html',
+      'open-application.html': 'team.html',
+      'technical-support.html':'contact.html',
+      'events.html':           'events.html',
+    };
+
+    const targetHref = pageToNavMap[currentFile];
+    if (!targetHref) return;
+
+    // Find the top-level nav link and apply page-active
+    const topLinks = document.querySelectorAll('.nav-menu > .menu-header-menu-container > ul > li > a.nav-link, #menu-header-menu > li > a.nav-link');
+    topLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === targetHref || href.endsWith('/' + targetHref)) {
+        link.classList.add('page-active');
+      }
+    });
+
+    // Also highlight exact sub-link if on a sub-page
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentFile || href.endsWith('/' + currentFile)) {
+        link.classList.add('page-active');
+      }
+    });
+  })();
+
+  // ============================================================
+  // Dark / Light Mode Toggle
+  // ============================================================
+  const themeToggle = document.getElementById('themeToggle');
+  const themeLabel = themeToggle ? themeToggle.querySelector('.theme-label') : null;
+  const themeIcon  = themeToggle ? themeToggle.querySelector('i') : null;
+
+  function applyTheme(mode) {
+    if (mode === 'light') {
+      document.body.classList.add('light-mode');
+      if (themeToggle) themeToggle.classList.add('is-light');
+      if (themeLabel) themeLabel.textContent = 'Light';
+      if (themeIcon)  { themeIcon.classList.remove('fa-moon'); themeIcon.classList.add('fa-sun'); }
+    } else {
+      document.body.classList.remove('light-mode');
+      if (themeToggle) themeToggle.classList.remove('is-light');
+      if (themeLabel) themeLabel.textContent = 'Dark';
+      if (themeIcon)  { themeIcon.classList.remove('fa-sun'); themeIcon.classList.add('fa-moon'); }
+    }
+    localStorage.setItem('wisdomTheme', mode);
+  }
+
+  // Load saved preference
+  applyTheme(localStorage.getItem('wisdomTheme') || 'dark');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.classList.contains('light-mode');
+      applyTheme(isLight ? 'dark' : 'light');
+    });
+  }
 });

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  <script>try{if(localStorage.getItem("wisdomTheme")==="light"){document.documentElement.style.background="#f0f4ff";}}catch(e){}</script>
 </head>
 <body>
 
@@ -42,6 +43,11 @@
           <span aria-hidden="true">|</span>
           <button type="button" data-language="fr" aria-pressed="false">FR</button>
         </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle Dark / Light Mode">
+          <i class="fa-solid fa-moon"></i>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          <span class="theme-label">Dark</span>
+        </button>
       </div>
     </div>
   </div>
