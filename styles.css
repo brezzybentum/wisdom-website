@@ -1330,6 +1330,12 @@ body.light-mode .lang-switch span { color: #475569; }
    -------------------------------------------------------------------------- */
 .team-section {
   padding: 90px 0;
+  background-color: #d1d3ed;
+}
+
+.section-title-wrap {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .team-grid {
@@ -1402,65 +1408,119 @@ body.light-mode .lang-switch span { color: #475569; }
 }
 
 /* --------------------------------------------------------------------------
-   13. Partners Section
+   13. Partners Section (Glassmorphism Overhaul)
    -------------------------------------------------------------------------- */
 .partners-section {
+  position: relative;
   padding: 90px 0;
-  background: linear-gradient(135deg, rgba(0, 174, 234, 0.08), rgba(8, 11, 104, 0.07));
+  /* Ambient vibrant background to give the glass blur depth */
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(0, 174, 234, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(8, 11, 104, 0.12) 0%, transparent 40%),
+    linear-gradient(135deg, rgba(0, 174, 234, 0.05), rgba(8, 11, 104, 0.08));
+  overflow: hidden;
 }
 
 .partners-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
+/* Glassmorphic Partner Card */
 .partner-logo-card {
-  padding: 28px;
+  padding: 32px 24px;
   text-align: center;
-  border: 1px solid rgba(0, 174, 234, 0.3);
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.62);
-  box-shadow: 0 18px 36px rgba(8, 11, 104, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(14px) saturate(125%);
-  backdrop-filter: blur(14px) saturate(125%);
-  transition: var(--transition);
+  border-radius: var(--radius-md, 16px);
+  
+  /* Translucent Glass Fill & Border */
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  
+  /* Multi-layered Specular Shadows for Depth */
+  box-shadow: 
+    0 16px 32px rgba(8, 11, 104, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 -1px 2px rgba(0, 174, 234, 0.12);
+  
+  /* Frosted Glass Filters */
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  
+  /* GPU Acceleration & Performance */
+  transform: translateZ(0);
+  will-change: transform, box-shadow, background;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Hover Dynamics */
 .partner-logo-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent-pink);
-  box-shadow: 0 22px 42px rgba(8, 11, 104, 0.16), 0 0 0 3px rgba(0, 174, 234, 0.08);
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(0, 174, 234, 0.5);
+  box-shadow: 
+    0 24px 48px rgba(8, 11, 104, 0.15),
+    0 0 24px rgba(0, 174, 234, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 1);
 }
 
+/* Frosted Inner Frame for Logos */
 .partner-logo-frame {
-  min-height: 190px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 22px;
-  padding: 12px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.86);
+  padding: 16px;
+  border-radius: var(--radius-sm, 10px);
+  
+  /* Soft Semi-opaque Glass Fill */
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 2px 6px rgba(8, 11, 104, 0.04);
+  
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 
 .partner-logo-frame img {
-  width: min(100%, 190px);
-  height: 170px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+  transition: transform 0.3s ease;
 }
 
+.partner-logo-card:hover .partner-logo-frame img {
+  transform: scale(1.04);
+}
+
+/* Typography Adjustments */
 .partner-logo-card h3 {
-  color: var(--primary);
+  color: var(--primary, #080b68);
   font-size: 20px;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .partner-logo-card p {
-  color: var(--text-muted);
-  font-size: 14px;
+  color: var(--text-muted, #556070);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+/* Fallback for Browsers Without Backdrop Support */
+@supports not (backdrop-filter: blur(1px)) {
+  .partner-logo-card {
+    background: rgba(255, 255, 255, 0.95);
+  }
 }
 
 /* --------------------------------------------------------------------------
