@@ -1370,12 +1370,9 @@ body.light-mode .lang-switch span { color: #475569; }
 .team-avatar-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.team-card:hover .team-avatar-wrapper img {
-  transform: scale(1.08);
+  object-fit: contain;
+  object-position: center;
+  transition: opacity 0.3s ease;
 }
 
 .team-avatar-fallback {
