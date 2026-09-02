@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Events & Seminars': 'Evenements et seminaires',
     'Support Center': 'Centre de support',
     'Career Opportunities': 'Opportunites de carriere',
-    'Aiyinasi, near Mobik Filling Station, Nzema, Ghana': 'Aiyinasi, pres de la station Mobik, Nzema, Ghana',
+    'Nzema Essiama, branch nzema Asasetre, Ghanaik Filling Station, Nzema, Ghana': 'Aiyinasi, pres de la station Mobik, Nzema, Ghana',
     'Get In Touch': 'Nous contacter',
     'Our Services': 'Nos services',
     'Learn More': 'En savoir plus',
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     , 'Surveys & Studies': 'Enquetes et etudes'
     , 'Finance & Industry': 'Finance et industrie'
     , 'Training & HR': 'Formation et ressources humaines'
-    , 'Since January 1995': 'Depuis janvier 1995'
+    , 'Since January 2017': 'Depuis janvier 2017'
     , 'Company Profile & History': 'Profil et histoire du cabinet'
     , 'Competitive Advantages': 'Avantages concurrentiels'
     , 'Corporate Philosophy': 'Philosophie de l entreprise'
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     , 'Evaluate execution quality and identify practical steps to improve results and resilience.': 'Nous evaluons la qualite de l execution et identifions des mesures pratiques pour ameliorer les resultats et la resilience.'
     , 'WISDOM ELITES LIMITED COMPANY regularly hosts and participates in events focused on management, governance, leadership, and organizational development.': 'WISDOM ELITES LIMITED COMPANY organise et participe regulierement a des evenements consacres au management, a la gouvernance, au leadership et au developpement organisationnel.'
     , 'A multidisciplinary group of consultants, auditors, project managers, and trainers who bring experience, rigor, and practical insight to every assignment.': 'Un groupe pluridisciplinaire de consultants, auditeurs, chefs de projet et formateurs qui apporte experience, rigueur et expertise pratique a chaque mission.'
-    , 'A multidisciplinary consultancy established in 1995, supporting institutions, private companies, and development partners with rigorous, practical, and locally grounded advisory services.': 'Un cabinet de conseil pluridisciplinaire etabli en 1995, qui accompagne les institutions, les entreprises privees et les partenaires au developpement avec des services de conseil rigoureux, pratiques et adaptes au contexte local.'
+    , 'A multidisciplinary consultancy established in 2017, supporting institutions, private companies, and development partners with rigorous, practical, and locally grounded advisory services.': 'Un cabinet de conseil pluridisciplinaire etabli en 2017, qui accompagne les institutions, les entreprises privees et les partenaires au developpement avec des services de conseil rigoureux, pratiques et adaptes au contexte local.'
     , 'Profile & History': 'Profil et histoire'
     , 'What Sets Us Apart': 'Ce qui nous distingue'
     , 'Our Mission': 'Notre mission'
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     , 'We focus on practical results that strengthen decision-making and execution.': 'Nous nous concentrons sur des resultats pratiques qui renforcent la prise de decision et l execution.'
     , 'Confidentiality, probity, and long-term trust remain central to our approach.': 'La confidentialite, la probite et la confiance a long terme restent au coeur de notre approche.'
     , 'The quality of management is central to long-term performance. We work with leaders to build the capabilities, structures, and discipline needed to sustain growth and resilience.': 'La qualite du management est au coeur de la performance a long terme. Nous accompagnons les dirigeants dans la construction des capacites, structures et disciplines necessaires pour maintenir la croissance et la resilience.'
-    , 'Since January 1995, WISDOM ELITES LIMITED COMPANY has stood beside companies, institutions, and development partners to deliver practical solutions that strengthen organizations from the inside out.': 'Depuis janvier 1995, WISDOM ELITES LIMITED COMPANY accompagne les entreprises, institutions et partenaires au developpement en fournissant des solutions pratiques qui renforcent les organisations de l interieur.'
+    , 'Since January 2017, WISDOM ELITES LIMITED COMPANY has stood beside companies, institutions, and development partners to deliver practical solutions that strengthen organizations from the inside out.': 'Depuis janvier 2017, WISDOM ELITES LIMITED COMPANY accompagne les entreprises, institutions et partenaires au developpement en fournissant des solutions pratiques qui renforcent les organisations de l interieur.'
     , 'We welcome spontaneous applications from professionals who want to contribute to our work in strategy, audit, studies, training, and institutional support.': 'Nous accueillons les candidatures spontanees de professionnels souhaitant contribuer a nos travaux en strategie, audit, etudes, formation et appui institutionnel.'
     , 'Apply Now': 'Postuler maintenant'
     , 'Meet the Team': 'Decouvrir l equipe'
