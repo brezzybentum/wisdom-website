@@ -1250,7 +1250,10 @@ body.light-mode .lang-switch span { color: #475569; }
    -------------------------------------------------------------------------- */
 .about-section {
   padding: 90px 0;
-  background: var(--bg-white);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url("image/image 3.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .about-grid {
@@ -1324,6 +1327,7 @@ body.light-mode .lang-switch span { color: #475569; }
   font-size: 13.5px;
   color: var(--text-muted);
 }
+
 
 /* --------------------------------------------------------------------------
    12. Team Section
@@ -1410,11 +1414,12 @@ body.light-mode .lang-switch span { color: #475569; }
 .partners-section {
   position: relative;
   padding: 90px 0;
-  /* Ambient vibrant background to give the glass blur depth */
+  /* Ambient vibrant background and electrical-services image give the glass cards depth */
   background: 
     radial-gradient(circle at 10% 20%, rgba(0, 174, 234, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(8, 11, 104, 0.12) 0%, transparent 40%),
-    linear-gradient(135deg, rgba(0, 174, 234, 0.05), rgba(8, 11, 104, 0.08));
+    linear-gradient(rgba(248, 250, 252, 0.72), rgba(248, 250, 252, 0.72)),
+    url("image/Wisdom LTD.jpeg") center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -1646,7 +1651,9 @@ textarea.form-control {
    14. Footer
    -------------------------------------------------------------------------- */
 .footer {
-  background: #090d16;
+  background:
+    linear-gradient(rgba(9, 13, 22, 0.88), rgba(9, 13, 22, 0.88)),
+    url("image/image 5.jpeg") center / cover no-repeat;
   color: rgba(255, 255, 255, 0.7);
   padding-top: 70px;
 }
